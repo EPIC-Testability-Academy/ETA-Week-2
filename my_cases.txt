@@ -1,0 +1,193 @@
+
+TEST CASES
+case	FI_Type	Coup_Freq	Ex_Date	Trade_Val	Trans	pairings
+1	01	M	Y	T	B	10
+2	01	Q	N	T+1	S	10
+3	04	Q	Y	T	M	9
+4	04	M	N	T+1	B	8
+5	12	S	N	T	S	9
+6	12	A	Y	T+1	M	9
+7	19	S	N	T-1	M	9
+8	19	A	Y	S	S	9
+9	20	A	N	T-1	B	8
+10	20	S	Y	S	B	7
+11	22	M	Y	T-1	S	8
+12	22	Q	N	S	M	7
+13	01	M	N	S+1	M	6
+14	04	Q	Y	S+1	B	5
+15	04	S	~Y	T-1	S	3
+16	12	A	~N	S+1	B	3
+17	19	M	~Y	S+1	S	3
+18	19	Q	~N	T	B	3
+19	20	M	~Y	T+1	M	3
+20	20	A	~N	T	S	3
+21	22	S	~Y	T+1	B	4
+22	01	S	~N	S	~M	2
+23	01	Q	~Y	T-1	~S	2
+24	04	A	~N	S	~S	2
+25	12	M	~Y	S	~B	3
+26	22	A	~N	S+1	~M	2
+27	12	Q	~N	T-1	~M	2
+28	20	Q	~Y	S+1	~S	2
+29	01	S	~Y	S+1	~B	1
+30	19	~A	~Y	T+1	~M	1
+31	22	~M	~N	T	~S	1
+32	01	A	~Y	~T	~M	1
+
+PAIRING DETAILS
+var1	var2	value1	value2	appearances	cases
+FI_Type	Trade_Val	01	T	2	1, 32
+FI_Type	Trade_Val	01	T+1	1	2
+FI_Type	Trade_Val	01	T-1	1	23
+FI_Type	Trade_Val	01	S	1	22
+FI_Type	Trade_Val	01	S+1	2	13, 29
+FI_Type	Trade_Val	04	T	1	3
+FI_Type	Trade_Val	04	T+1	1	4
+FI_Type	Trade_Val	04	T-1	1	15
+FI_Type	Trade_Val	04	S	1	24
+FI_Type	Trade_Val	04	S+1	1	14
+FI_Type	Trade_Val	12	T	1	5
+FI_Type	Trade_Val	12	T+1	1	6
+FI_Type	Trade_Val	12	T-1	1	27
+FI_Type	Trade_Val	12	S	1	25
+FI_Type	Trade_Val	12	S+1	1	16
+FI_Type	Trade_Val	19	T	1	18
+FI_Type	Trade_Val	19	T+1	1	30
+FI_Type	Trade_Val	19	T-1	1	7
+FI_Type	Trade_Val	19	S	1	8
+FI_Type	Trade_Val	19	S+1	1	17
+FI_Type	Trade_Val	20	T	1	20
+FI_Type	Trade_Val	20	T+1	1	19
+FI_Type	Trade_Val	20	T-1	1	9
+FI_Type	Trade_Val	20	S	1	10
+FI_Type	Trade_Val	20	S+1	1	28
+FI_Type	Trade_Val	22	T	1	31
+FI_Type	Trade_Val	22	T+1	1	21
+FI_Type	Trade_Val	22	T-1	1	11
+FI_Type	Trade_Val	22	S	1	12
+FI_Type	Trade_Val	22	S+1	1	26
+FI_Type	Coup_Freq	01	M	2	1, 13
+FI_Type	Coup_Freq	01	Q	2	2, 23
+FI_Type	Coup_Freq	01	S	2	22, 29
+FI_Type	Coup_Freq	01	A	1	32
+FI_Type	Coup_Freq	04	M	1	4
+FI_Type	Coup_Freq	04	Q	2	3, 14
+FI_Type	Coup_Freq	04	S	1	15
+FI_Type	Coup_Freq	04	A	1	24
+FI_Type	Coup_Freq	12	M	1	25
+FI_Type	Coup_Freq	12	Q	1	27
+FI_Type	Coup_Freq	12	S	1	5
+FI_Type	Coup_Freq	12	A	2	6, 16
+FI_Type	Coup_Freq	19	M	1	17
+FI_Type	Coup_Freq	19	Q	1	18
+FI_Type	Coup_Freq	19	S	1	7
+FI_Type	Coup_Freq	19	A	2	8, 30
+FI_Type	Coup_Freq	20	M	1	19
+FI_Type	Coup_Freq	20	Q	1	28
+FI_Type	Coup_Freq	20	S	1	10
+FI_Type	Coup_Freq	20	A	2	9, 20
+FI_Type	Coup_Freq	22	M	2	11, 31
+FI_Type	Coup_Freq	22	Q	1	12
+FI_Type	Coup_Freq	22	S	1	21
+FI_Type	Coup_Freq	22	A	1	26
+FI_Type	Trans	01	B	2	1, 29
+FI_Type	Trans	01	S	2	2, 23
+FI_Type	Trans	01	M	3	13, 22, 32
+FI_Type	Trans	04	B	2	4, 14
+FI_Type	Trans	04	S	2	15, 24
+FI_Type	Trans	04	M	1	3
+FI_Type	Trans	12	B	2	16, 25
+FI_Type	Trans	12	S	1	5
+FI_Type	Trans	12	M	2	6, 27
+FI_Type	Trans	19	B	1	18
+FI_Type	Trans	19	S	2	8, 17
+FI_Type	Trans	19	M	2	7, 30
+FI_Type	Trans	20	B	2	9, 10
+FI_Type	Trans	20	S	2	20, 28
+FI_Type	Trans	20	M	1	19
+FI_Type	Trans	22	B	1	21
+FI_Type	Trans	22	S	2	11, 31
+FI_Type	Trans	22	M	2	12, 26
+FI_Type	Ex_Date	01	Y	4	1, 23, 29, 32
+FI_Type	Ex_Date	01	N	3	2, 13, 22
+FI_Type	Ex_Date	04	Y	3	3, 14, 15
+FI_Type	Ex_Date	04	N	2	4, 24
+FI_Type	Ex_Date	12	Y	2	6, 25
+FI_Type	Ex_Date	12	N	3	5, 16, 27
+FI_Type	Ex_Date	19	Y	3	8, 17, 30
+FI_Type	Ex_Date	19	N	2	7, 18
+FI_Type	Ex_Date	20	Y	3	10, 19, 28
+FI_Type	Ex_Date	20	N	2	9, 20
+FI_Type	Ex_Date	22	Y	2	11, 21
+FI_Type	Ex_Date	22	N	3	12, 26, 31
+Trade_Val	Coup_Freq	T	M	2	1, 31
+Trade_Val	Coup_Freq	T	Q	2	3, 18
+Trade_Val	Coup_Freq	T	S	1	5
+Trade_Val	Coup_Freq	T	A	2	20, 32
+Trade_Val	Coup_Freq	T+1	M	2	4, 19
+Trade_Val	Coup_Freq	T+1	Q	1	2
+Trade_Val	Coup_Freq	T+1	S	1	21
+Trade_Val	Coup_Freq	T+1	A	2	6, 30
+Trade_Val	Coup_Freq	T-1	M	1	11
+Trade_Val	Coup_Freq	T-1	Q	2	23, 27
+Trade_Val	Coup_Freq	T-1	S	2	7, 15
+Trade_Val	Coup_Freq	T-1	A	1	9
+Trade_Val	Coup_Freq	S	M	1	25
+Trade_Val	Coup_Freq	S	Q	1	12
+Trade_Val	Coup_Freq	S	S	2	10, 22
+Trade_Val	Coup_Freq	S	A	2	8, 24
+Trade_Val	Coup_Freq	S+1	M	2	13, 17
+Trade_Val	Coup_Freq	S+1	Q	2	14, 28
+Trade_Val	Coup_Freq	S+1	S	1	29
+Trade_Val	Coup_Freq	S+1	A	2	16, 26
+Trade_Val	Trans	T	B	2	1, 18
+Trade_Val	Trans	T	S	3	5, 20, 31
+Trade_Val	Trans	T	M	2	3, 32
+Trade_Val	Trans	T+1	B	2	4, 21
+Trade_Val	Trans	T+1	S	1	2
+Trade_Val	Trans	T+1	M	3	6, 19, 30
+Trade_Val	Trans	T-1	B	1	9
+Trade_Val	Trans	T-1	S	3	11, 15, 23
+Trade_Val	Trans	T-1	M	2	7, 27
+Trade_Val	Trans	S	B	2	10, 25
+Trade_Val	Trans	S	S	2	8, 24
+Trade_Val	Trans	S	M	2	12, 22
+Trade_Val	Trans	S+1	B	3	14, 16, 29
+Trade_Val	Trans	S+1	S	2	17, 28
+Trade_Val	Trans	S+1	M	2	13, 26
+Trade_Val	Ex_Date	T	Y	3	1, 3, 32
+Trade_Val	Ex_Date	T	N	4	5, 18, 20, 31
+Trade_Val	Ex_Date	T+1	Y	4	6, 19, 21, 30
+Trade_Val	Ex_Date	T+1	N	2	2, 4
+Trade_Val	Ex_Date	T-1	Y	3	11, 15, 23
+Trade_Val	Ex_Date	T-1	N	3	7, 9, 27
+Trade_Val	Ex_Date	S	Y	3	8, 10, 25
+Trade_Val	Ex_Date	S	N	3	12, 22, 24
+Trade_Val	Ex_Date	S+1	Y	4	14, 17, 28, 29
+Trade_Val	Ex_Date	S+1	N	3	13, 16, 26
+Coup_Freq	Trans	M	B	3	1, 4, 25
+Coup_Freq	Trans	M	S	3	11, 17, 31
+Coup_Freq	Trans	M	M	2	13, 19
+Coup_Freq	Trans	Q	B	2	14, 18
+Coup_Freq	Trans	Q	S	3	2, 23, 28
+Coup_Freq	Trans	Q	M	3	3, 12, 27
+Coup_Freq	Trans	S	B	3	10, 21, 29
+Coup_Freq	Trans	S	S	2	5, 15
+Coup_Freq	Trans	S	M	2	7, 22
+Coup_Freq	Trans	A	B	2	9, 16
+Coup_Freq	Trans	A	S	3	8, 20, 24
+Coup_Freq	Trans	A	M	4	6, 26, 30, 32
+Coup_Freq	Ex_Date	M	Y	5	1, 11, 17, 19, 25
+Coup_Freq	Ex_Date	M	N	3	4, 13, 31
+Coup_Freq	Ex_Date	Q	Y	4	3, 14, 23, 28
+Coup_Freq	Ex_Date	Q	N	4	2, 12, 18, 27
+Coup_Freq	Ex_Date	S	Y	4	10, 15, 21, 29
+Coup_Freq	Ex_Date	S	N	3	5, 7, 22
+Coup_Freq	Ex_Date	A	Y	4	6, 8, 30, 32
+Coup_Freq	Ex_Date	A	N	5	9, 16, 20, 24, 26
+Trans	Ex_Date	B	Y	6	1, 10, 14, 21, 25, 29
+Trans	Ex_Date	B	N	4	4, 9, 16, 18
+Trans	Ex_Date	S	Y	6	8, 11, 15, 17, 23, 28
+Trans	Ex_Date	S	N	5	2, 5, 20, 24, 31
+Trans	Ex_Date	M	Y	5	3, 6, 19, 30, 32
+Trans	Ex_Date	M	N	6	7, 12, 13, 22, 26, 27

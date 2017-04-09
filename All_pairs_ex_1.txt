@@ -1,0 +1,7 @@
+FI_Type	Coup_Freq	Ex_Date	Trade_Val	Trans
+01	M	Y	T	B
+04	Q	N	T+1	S
+12	S		T-1	M
+19	A		S	I
+20			S+1	
+22				
